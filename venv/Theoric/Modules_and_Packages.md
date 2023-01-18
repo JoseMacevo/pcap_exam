@@ -462,7 +462,7 @@ Then when you execute _import pkg_, modules _mod1_ and _mod2_ are imported autom
 For the purposes of the following discussion, the previously defined package is expanded to contain some additional
 modules.
 
-![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_image.png)
+>![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_image.png)
 
 There are now four modules defined in the _pkg_ directory. Their contents are as shown below:
 
@@ -547,7 +547,7 @@ when _import *_ is specified. But _the default behavior differs_:
 Packages can contain nested **subpackages** to arbitrary depth. For example, let's make one more modification to the example **package**
 directory as follows:
 
-![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/pkg4.webp)
+>![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/pkg4.webp)
 
 The four modules (mod1.py, mod2.py, mod3.py, and mod4.py) are defined as previously. But now, instead of being lumped together into the _pkg_
 directory, they are split out into two **subpackage** directories, sub_pkg1 and sub_pkg2.
