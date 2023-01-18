@@ -56,7 +56,7 @@ For example, suppose you have created a file called _mod.py_ containing the foll
 
 ### mod.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages.png)
 
 
 
@@ -70,7 +70,7 @@ Several objects are defined in _mod.py_
 
  Assuming _mod.py_ is in an appropriate location, which you'll learn more about shortly, these objects can be accessed by **importing** the module as follows.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_1.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_1.png)
 
 
 ## The Module Search Path
@@ -79,7 +79,7 @@ Continuing with the above example, let's take a look at what happens when
 Python executes the statement.
 
 ### Python
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_2.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_2.png)
 
 
 When the interpreter executes the above _import_ statement, it searches for _mod.py_ in a [list](https://realpython.com/python-lists-tuples/) of directories assembled from the following sources:
@@ -90,7 +90,7 @@ When the interpreter executes the above _import_ statement, it searches for _mod
 
 The resulting search path is accesible in the Python variable **sys.path**, wich is obtained from a module named **sys**.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_3.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_3.png)
 
 
 Thus, to ensure your module is found, you need to do one of the following.
@@ -105,12 +105,12 @@ or may not have have write-access to, depending on the OS.
 There's actually one additional option: you can put the module file in any
 directory of your choice and then modify **sys.path** at run-time so that it contains that directory. For example, in this case, you could put **mod.py** in directory C:\Users\john and then issue the following statements.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_4.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_4.png)
 
 
 Once a module has been imported, you can determine the location where it was found with the module's __file__ attribute.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_5.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_5.png)
 
 
 The directory portion of __file__ should be one of the directories in _sys.path_.
@@ -124,7 +124,7 @@ The directory portion of __file__ should be one of the directories in _sys.path_
 
 The simplest form is the one already shown above.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_6.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_6.png)
 
 Note that this _does not_ make the module contents _directly_ accessible to the caller.
 
@@ -139,49 +139,49 @@ After the following **import** statement, **mod** is placed into hte local symbo
 
 Thus, **mod** has meaning in the caller's local context:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_7.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_7.png)
 
 
 But  **->S<-** and **->foo<-** remain in the module's private symbol table and are not meaningful in the local context:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_8.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_8.png)
 
 
 To be accessed in the local context, names of objects defined in the module must
 be prefixed by **mod**:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_9.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_9.png)
 
 Several comma-separated modules may be specified in a single **import** statement.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_10.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_10.png)
 
 
 ## from <module_name> import <name(s)>
 
 An alternate form of the **import** statement allows individual objects from the module to be imported _directly into the caller's symbol table_
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_11.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_11.png)
 
 
 Following execution of the above statement, <name(s)> can be referenced in the
 caller's environment without the <module_name> prefix.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_12.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_12.png)
 
 
 Because this form of **import** places the object names directly into the caller's symbol table, any objects that already exist with the same name will be
 **overwritten**.
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_13.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_13.png)
 
 
 It is even possible to indiscriminately _import_ everything from a module at one fell swoop:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_14.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_14.png)
 
 
 This will place the names of _all_ objects from <module_name> into the local symbol table, with the exception of any that begin with the underscore(_) character.
@@ -190,7 +190,7 @@ For example:
 
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_15.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_15.png)
 
 
 This isn't necessarily recommended in large-scale production code. It's a bit dangerous because you're entering names into the local symbol table _en masse_.
@@ -202,33 +202,33 @@ Unless you know them all well and can be confident there won't be a conflict, yo
 It is also possible to _import_ individual objects but enter them into the local symbol table with alternate names:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_16.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_16.png)
 
 
 
 This makes it possible to place names directly into the local symbol table but avoid conflicts with previously existing names:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_17.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_17.png)
 
 
 ## import <module_name> as <alt_name>
 
 You can also import an entire module under an alternate name:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_01.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_01.png)
 
 Module contents can be imported from within a [function definition](https://realpython.com/defining-your-own-python-function/). In that case, the _import_ does _not occur_ until the function is called:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_02.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_02.png)
 
 However, **Python 3** does not allow the indiscriminate import sintax (*) from within a function:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_03.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_03.png)
 
 Lastly, a [try statement with an except ImportError](https://realpython.com/python-exceptions/) clause can be used to guard against unsuccessful _import_ attempts:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_04.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_04.png)
 
 
 ## The **_dir()_** Function.
@@ -237,19 +237,19 @@ The built-in function _dir()_ returns a list of defined names in a namespace.
 Without arguments, it produces an alphabetically sorted list of names in the current **local symbol table:**
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_05.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_05.png)
 
 Note how the first call to _dir()_ above lists several names that are automatically defined and already in the namespace when the interpreter starts. As new names are defined(qux, Bar, x), they appear on subsequent invocations of _dir()._
 
 This can be useful for identifying what exactly has been added to the namespace by an import statement:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_06.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_06.png)
 
 When given an argument that is the name of a module, dir() lists the names defined in the module:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_07.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_07.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_08.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_08.png)
 
 
 ## Executing a Module as a Script
@@ -260,12 +260,12 @@ Here again is _mod.py_ as it was defined above.
 
 ### mod.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_09.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_09.png)
 
 This can be run as a script:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_10.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_10.png)
 
 There are no errors, so it apparently worked. Granted, it's not very interesting. As it is written, it only defines objects. It doesn't do anything with them, and it doesn't generate any output.
 
@@ -274,18 +274,18 @@ Let's modify the above Python module so it does generate some output when run as
 
 ### mod.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_11.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_11.png)
 
 
 Now it should be a little more interesting:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_12.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_12.png)
 
 
 Unfortunately, now it also generates output when imported as a module:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_13.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_13.png)
 
 
 This is probably not what you want. It isn't  usual for a module to generate output when it is imported.
@@ -299,18 +299,18 @@ When a _.py_ file is imported as a module, Python sets the special _dunder_ vari
 ### mod.py
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_14.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_14.png)
 
 
 Now, if you run as a script, you get output:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_15.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_15.png)
 
 
 But if you import as a module, you don't:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_16.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_16.png)
 
 
 Modules are often designed with the capability to run as a standalone script for purposes of testing the functionality that is contained within the module. This is referred to as [Unit testing](https://realpython.com/python-testing/). For example, suppose you've created a module _fact.py_ containing a **factorial** function, as follows?
@@ -318,18 +318,18 @@ Modules are often designed with the capability to run as a standalone script for
 
 ## fact.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_17.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_17.png)
 
 
 The file can be treated as a module, and the _fact()_ function imported:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_18.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_18.png)
 
 
 But it can also be run as a standalone by passing an integer argument on the command-line for testing.
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_19.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_19.png)
 
 
 ## Reloading a Module
@@ -341,9 +341,9 @@ Consider the following file _mod.py_
 
 ## mod.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_20.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_20.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_21.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_21.png)
 
 
 The _print()_ statement isn't executed on subsequent imports. (For that matter, neither is the assignment statement, but as the final display of the value of _mod.a_ shows, that doesn't matter. Once the assignment is made, it sticks.)
@@ -351,7 +351,7 @@ The _print()_ statement isn't executed on subsequent imports. (For that matter, 
 If you make a change to a module and need to reload it, you need to either restart the interpreter or use a function called _reload()_ from module _importlib_:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_22.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_22.png)
 
 
 ## Python Packages.
@@ -363,51 +363,51 @@ Suppose you've developed a very large application that includes many modules. As
 Creating a _package_ is quite straightforward, since it makes use of the operating system's inherent hierarchical file structure. Consider the following arrangement:
 
 
->![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_23.png)
+>![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_23.png)
 
 Here, there is a **directory named _pkg_** that contains two modules, _mod1.py_ and _mod2.py_. The contents of the modules are:
 
 ### mod1.py
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_24.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_24.png)
 
 
 ### mod2.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_25.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_25.png)
 
 
 Given this structure, if the _pkg_ directory resides in a location where it can be found (in one of the directories contained in _sys.path_), you can refer to the two **modules** with **dot notation** (pkg.mod1, pkg.mod2) and import them with the syntax you're already familiar with:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_26.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_26.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_18.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_18.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_19.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_19.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_20.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_20.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_21.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_21.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_22.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_22.png)
 
 
 You can import modules with these statements as well:
 
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_23.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_23.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_24.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_24.png)
 
 
 You can technically import the package as well:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_25.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_25.png)
 
 But this is of little avail. Though this is, strictly speaking, a syntactically correct Python statement, it doesn't do much of anything useful. In particular _it doesn't place_ any of the modules in _pkg_ into the local namespace.
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_26.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_26.png)
 
 To actually import the modules or their contents, you need to use one of the forms shown above.
 
@@ -422,21 +422,24 @@ For example, consider the following  <\_\_init__.py> file:
 
 ### \_\_init__.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_27.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_27.png)
 
 Let's add this file to the _pkg_ directory from the above example:
 
+>![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/pkg2.webp)
+
+
 Now when the package is imported, the global list A is initialized:
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_27.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_27.png)
 
 A _module_ in the package can access the global variable by importing it in turn:
 
 ### mod1.py
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_packages_28.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_28.png)
 
-![](/home/josemacevo/Downloads/markdown_tutorial_images/modules_and_packages_28.png)
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_28.png)
 
 \_\_init__.py can also be used to effect automatic importing of modules from a package. For example, earlier you
 saw that the statement _import_ pkg only places the name pkg in the caller's local symbol table and doesn't import
@@ -444,4 +447,147 @@ any modules. But if \_\_init__ .py in the pkg directory contains the following.
 
 ### \_\_init__.py
 
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_29.png)
 
+Then when you execute _import pkg_, modules _mod1_ and _mod2_ are imported automatically.
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_29.png)
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_30.png)
+
+[_*See PEP420 - Implicit Namespace Packages_.](https://peps.python.org/pep-0420/)
+
+## Importing * From a Package.
+
+For the purposes of the following discussion, the previously defined package is expanded to contain some additional
+modules.
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_image.png)
+
+There are now four modules defined in the _pkg_ directory. Their contents are as shown below:
+
+### mod1.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_30.png)
+
+### mod2.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_31.png)
+
+### mod3.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_31.png)
+
+### mod4.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_32.png)
+
+**Imaginative, aren't they?...**
+
+You have already seen that when _import *_ is used for a **module**, _all_ objects from
+the module are imported into the local symbol table, except those whose names
+begin with an underscore, as always:
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_33.png)
+
+The analogous statement for a **package** is this.
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_32.png)
+
+What does that do?
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_33.png)
+
+Hmph. Not much. You might have expected (assuming you had any expectations at all)
+that Python would dive down into the package directory, find all the modules it could,
+and import them all. But as you can see, by default that isn't what happens.
+
+Instead, Python folows this convention:
+> If the \_\_init__.py file in the **package** directory contains a **list** named \_\_all__,
+> it is taken to be a list of modules that should be imported when the statement from <package_name>
+> import * is encountered.
+
+For the present example, suppose you create an \_\_init__.py in the _pkg_ directory like this:
+
+### pkg/\_\_init__.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_34.png)
+
+Now _from pkg import *_ imports all four moudules.
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_34.png)
+
+Using _import *_ considered terrific form, any mor for **packages** than for **modules**. But this
+facility at least gives the creator of the package some control over what happens when _import *_ is
+specified. (In fact, it provides the capability to disallow it entirelly, simply by declining to define
+\_\_all__ at all. As you have seen, the default behavior for packages is to import nothing.)
+
+By the way, \_\_all__ can be defined in a **module** as well and serves the same purpose: to control
+what is imported with _import *_. For example, modify _mod1.py as follows.
+
+### pkg/mod1.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_35.png)
+
+Now an _import *_ statement from _pkg.mod1_ will only import what is contained in \_\_all__:
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_35.png)
+
+_foo()_ (the function) is now defined in the local namespace, but _Foo_ (the class) is not,
+because the latter is no in \_\_all__.
+
+In summary, \_\_all__ is used bot **packages** and **modules** to control what is imported
+when _import *_ is specified. But _the default behavior differs_:
+
+- For a package, when \_\_all__ is not defined, import * does not import anything.
+- For a module, when \_\_all__ is not defined, import * imports everything (except-you guessed it-names starting with an underscore).
+
+## Subpackages.
+
+Packages can contain nested **subpackages** to arbitrary depth. For example, let's make one more modification to the example **package**
+directory as follows:
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/pkg4.webp)
+
+The four modules (mod1.py, mod2.py, mod3.py, and mod4.py) are defined as previously. But now, instead of being lumped together into the _pkg_
+directory, they are split out into two **subpackage** directories, sub_pkg1 and sub_pkg2.
+
+Importing still works the same as shown previously. Syntax is similar, but additional **dot notation** is used to separate **package** name from **subpackage**
+name.
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_36.png)
+
+In addition, a module in one **subpackage** can reference objects in a **sibling subpackage** (in the event that the sibling contains some functionality
+that you need). For example, suppose you want to import and execute function _foo()_(defined in module mod1) from within module _mod3_. you can either use an
+**absolute import**
+
+### pkg/sub\_\_pkg2/mod3.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_36.png)
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_37.png)
+
+Or you can use a **relative import**, where ... refers to the package one level up.
+From within _mod3.py_, which is in subpackage _sub\_\_pkg2,
+
+- .. evaluates to the parent package (pkg), and
+- .. _sub\_\_pkg1_ evaluates to subpackage _sub\_\_pkg1_ of the parent package.
+
+### pkg/sub\_\_pkg2/mod3.py
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_and_packages_37.png)
+
+![](/home/josemacevo/Documents/Development/Python/pcap_exam/venv/Theoric/markdown_tutorial_images/modules_packages_38.png)
+
+## Conclusion
+Topics covered in this tutorial:
+
+1. How to create a **Python module**.
+2. Locations where the Python interpreter searches for a module.
+3. How to obtain access to the objects defined in a module with the _import_ statement.
+4. How to create a module that is executable as a standalone script.
+5. How to organize modules into **packages** and **subpackages.**
+6. How to control package initialization.
+
+This will hopefully allow you to better understand how to gain access to the functionality 
+available in the many third-party and built-in modules available in Python.
